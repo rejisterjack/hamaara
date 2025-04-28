@@ -1,17 +1,13 @@
-@use "../../styles/variables.scss" as v;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 .investment-container {
   padding: 8rem 0;
   width: 100%;
-  max-width: v.$max-width;
+  max-width: 1200px;
   margin: 0 auto;
   
-  @include v.tablet {
+  @media (max-width: 768px) {
     padding: 4rem 1.5rem;
-  }
-  
-  @include v.tablet-sm {
-    padding: 3.5rem 1.2rem;
   }
 }
 
@@ -19,32 +15,32 @@
   text-align: center;
   margin-bottom: 5rem;
   
-  @include v.tablet {
+  @media (max-width: 768px) {
     margin-bottom: 3rem;
   }
 
   .investment-title {
-    font-family: v.$font-roboto;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 4rem;
     margin-bottom: 1rem;
     
-    @include v.tablet {
+    @media (max-width: 768px) {
       font-size: 2.8rem;
     }
     
-    @include v.tablet-sm {
+    @media (max-width: 576px) {
       font-size: 2.3rem;
     }
   }
 
   .investment-desc {
-    font-family: v.$font-roboto;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1.7rem;
     color: #666;
     
-    @include v.tablet {
+    @media (max-width: 768px) {
       font-size: 1.4rem;
     }
   }
@@ -57,12 +53,12 @@
   align-items: center;
   gap: 10rem;
 
-  @include v.desktop-sm {
+  @media (max-width: 992px) {
     flex-direction: column-reverse;
     gap: 4rem;
   }
   
-  @include v.tablet-sm {
+  @media (max-width: 576px) {
     gap: 3rem;
   }
 }
@@ -73,7 +69,7 @@
   flex-direction: column;
   gap: 3rem;
   
-  @include v.tablet {
+  @media (max-width: 768px) {
     gap: 2.5rem;
     width: 100%;
   }
@@ -85,7 +81,7 @@
   align-items: flex-start;
   max-width: 46rem;
   
-  @include v.tablet {
+  @media (max-width: 768px) {
     max-width: 100%;
   }
 
@@ -97,7 +93,7 @@
       height: 3.5rem;
       display: block;
       
-      @include v.tablet-sm {
+      @media (max-width: 576px) {
         width: 2.8rem;
         height: 2.8rem;
       }
@@ -105,25 +101,25 @@
   }
 
   .step-title {
-    font-family: v.$font-roboto;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 2.1rem;
     margin-bottom: 0.8rem;
     
-    @include v.tablet {
+    @media (max-width: 768px) {
       font-size: 1.8rem;
     }
   }
 
   .step-desc {
-    font-family: v.$font-roboto;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
     color: #666;
     line-height: 1.5;
     text-align: left;
     
-    @include v.tablet {
+    @media (max-width: 768px) {
       font-size: 1.3rem;
     }
   }
@@ -135,7 +131,7 @@
   justify-content: center;
   align-items: center;
   
-  @include v.tablet {
+  @media (max-width: 768px) {
     width: 100%;
   }
 
@@ -143,40 +139,8 @@
     max-width: 100%;
     height: auto;
     
-    @include v.tablet-sm {
+    @media (max-width: 576px) {
       max-width: 100%;
-    }
-  }
-}
-
-// Add support for very small screens
-@include v.mobile-sm {
-  .investment-container {
-    padding: 3rem 1rem;
-  }
-  
-  .investment-header {
-    .investment-title {
-      font-size: 2rem;
-    }
-    
-    .investment-desc {
-      font-size: 1.3rem;
-    }
-  }
-  
-  .investment-step {
-    .step-icon img {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-    
-    .step-title {
-      font-size: 1.6rem;
-    }
-    
-    .step-desc {
-      font-size: 1.2rem;
     }
   }
 }
