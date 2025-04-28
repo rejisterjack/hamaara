@@ -1,0 +1,118 @@
+@use "../../styles/variables.scss" as v;
+
+.hero_section {
+  max-width: v.$max-width;
+  margin: 0 auto;
+  border-radius: 4.9rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.9) 15%,
+      rgba(255, 255, 255, 0.7) 30%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    url("src/assets/four.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  min-height: 80vh;
+
+  .navbar {
+    max-width: 1035px;
+    margin: 0 auto;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 756px;
+    max-height: 308px;
+    margin: 8rem auto;
+  }
+
+  &_heading {
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 2rem;
+    width: 100%;
+    .invest {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-size: 6.5rem;
+      letter-spacing: -2px;
+      display: inline-block;
+      filter: drop-shadow(0 1px 3px #4780fc3b);
+      background: linear-gradient(to bottom, #4B83FE, #003299);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .future {
+      font-family: "Geist", sans-serif;
+      font-weight: 600;
+      font-size: 8rem;
+      letter-spacing: -4px;
+      display: inline-block;
+      filter: drop-shadow(0 1px 3px #4780fc3b);
+      padding: 0 1rem;
+    }
+
+    .hamaara {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-size: 7.3rem;
+      letter-spacing: -2px;
+      font-style: italic;
+      display: inline-block;
+      filter: drop-shadow(0 1px 3px #4780fc3b);
+      background: linear-gradient(to bottom, #4B83FE, #003299);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &_description {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    font-family: "Inter", sans-serif;
+    max-width: 90%;
+  }
+
+  &_buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3rem;
+
+    button {
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 1.6rem;
+      padding: 1.2rem 2.4rem;
+      border-radius: 0.8rem;
+      width: 180px;
+      color: white;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .get-in-touch {
+      background: linear-gradient(to bottom, #787878, #2c2c2d);
+    }
+
+    .invest {
+      background: linear-gradient(to bottom, #4b83fe, #2256c6);
+    }
+  }
+}
