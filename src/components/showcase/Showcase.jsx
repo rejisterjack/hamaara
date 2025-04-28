@@ -57,7 +57,8 @@ const Showcase = () => {
       {/* Scrolling Logos Section */}
       <div className="showcase_logos_container">
         <div className="showcase_logos">
-          {[...logos, ...logos].map((logo, index) => (
+          {/* Duplicate logos to create a continuous loop */}
+          {[...logos, ...logos, ...logos].map((logo, index) => (
             <div className="logo_box" key={`logo-${index}`}>
               <div className={`logo_square gradient-${logo.id % 8 || 8}`}>
                 {/* No image tag - using gradient background */}

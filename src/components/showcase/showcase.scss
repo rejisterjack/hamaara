@@ -2,8 +2,7 @@
 
 .showcase {
   max-width: v.$max-width;
-  margin: 0 auto;
-  padding: 6rem 2rem;
+  margin: 6rem auto;
 
   // Cards Section
   &_cards {
@@ -41,7 +40,7 @@
       .card_image {
         flex: 1;
         max-width: 50%;
-        
+
         @include v.tablet {
           max-width: 100%;
         }
@@ -51,10 +50,10 @@
           height: 100%;
           object-fit: cover;
           border-radius: 2rem;
-          
+
           @include v.tablet {
             border-radius: 2rem 2rem 0 0;
-            max-height: 30rem;
+            max-height: 25rem;
           }
         }
       }
@@ -89,7 +88,7 @@
           padding: 1.2rem 2.4rem;
           border-radius: 0.8rem;
           color: white;
-          background: linear-gradient(to bottom, #4b83fe, #2256c6);
+          background: linear-gradient(to bottom, #787878, #2c2c2d);
           transition: opacity 0.3s ease;
 
           &:hover {
@@ -108,22 +107,15 @@
     height: 100%;
 
     .showcase_card.small {
-      padding: 3rem;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
 
       h2 {
         font-size: 5rem;
         font-weight: 700;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
         color: #333;
-        background: linear-gradient(to bottom, #4b83fe, #2256c6);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
       }
 
       p {
@@ -141,14 +133,17 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    padding: 3rem 0;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       width: 10rem;
       height: 100%;
       z-index: 1;
       pointer-events: none;
+      top: 0;
     }
 
     &::before {
@@ -164,18 +159,21 @@
 
   &_logos {
     display: flex;
-    animation: scroll 30s linear infinite;
     width: max-content;
-    padding: 2rem 0;
+    will-change: transform;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    animation: scrollRightToLeft 40s linear infinite;
 
     .logo_box {
       display: flex;
       align-items: center;
-      margin: 0 3rem;
-      transition: transform 0.3s ease;
+      margin: 0 6rem;
+      flex-shrink: 0; // Prevent logo boxes from shrinking
 
+      // Remove hover transformation
       &:hover {
-        transform: translateY(-5px);
+        transform: none;
       }
 
       .logo_square {
@@ -186,36 +184,36 @@
         align-items: center;
         justify-content: center;
         margin-right: 1.5rem;
-        
+
         // Different gradient backgrounds for each logo
         &.gradient-1 {
           background: linear-gradient(to bottom, #000000, #1a1a1a);
         }
-        
+
         &.gradient-2 {
           background: linear-gradient(to bottom, #0d0d0d, #262626);
         }
-        
+
         &.gradient-3 {
           background: linear-gradient(to bottom, #1a1a1a, #333333);
         }
-        
+
         &.gradient-4 {
           background: linear-gradient(to bottom, #262626, #404040);
         }
-        
+
         &.gradient-5 {
           background: linear-gradient(to bottom right, #000000, #333333);
         }
-        
+
         &.gradient-6 {
           background: linear-gradient(to right, #111111, #292929);
         }
-        
+
         &.gradient-7 {
           background: linear-gradient(to top right, #0a0a0a, #2e2e2e);
         }
-        
+
         &.gradient-8 {
           background: linear-gradient(to left, #1e1e1e, #383838);
         }
@@ -231,12 +229,12 @@
   }
 }
 
-@keyframes scroll {
+@keyframes scrollRightToLeft {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -269,7 +267,7 @@
       h2 {
         font-size: 4rem;
       }
-      
+
       p {
         font-size: 1.8rem;
       }
