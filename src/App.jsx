@@ -7,6 +7,7 @@ import Overview from "./components/overview/Overview"
 import Investment from "./components/investment/Investment"
 import Distributions from "./components/distributions/Distributions"
 import Explore from "./components/explore/Explore"
+import Contact from "./components/contact/Contact"
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Investment />
       <Distributions />
       <Explore />
+      <Contact />
     </div>
   )
 }

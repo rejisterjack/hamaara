@@ -1,6 +1,10 @@
+@use "../../styles/variables.scss" as v;
+
 .explore-container {
-  padding: 4rem 5%;
+  padding: 4rem 0;
   width: 100%;
+  max-width: v.$max-width; // Changed from hardcoded 1300px to variable
+  margin: 0 auto;
 }
 
 .explore-header {
