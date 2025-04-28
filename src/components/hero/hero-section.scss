@@ -17,7 +17,7 @@
   background-position: bottom;
   background-repeat: no-repeat;
   padding: 2rem;
-  min-height: 80vh;
+  min-height: 77.5rem;
 
   .navbar {
     max-width: 1035px;
@@ -46,7 +46,7 @@
       letter-spacing: -2px;
       display: inline-block;
       filter: drop-shadow(0 1px 3px #4780fc3b);
-      background: linear-gradient(to bottom, #4B83FE, #003299);
+      background: linear-gradient(to bottom, #4b83fe, #003299);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -58,7 +58,7 @@
       font-size: 8rem;
       letter-spacing: -4px;
       display: inline-block;
-      filter: drop-shadow(0 1px 3px #4780fc3b);
+      filter: drop-shadow(0 1px 3px #4780fc3b) drop-shadow(0 2px 5px #4780fc33);
       padding: 0 1rem;
     }
 
@@ -70,7 +70,7 @@
       font-style: italic;
       display: inline-block;
       filter: drop-shadow(0 1px 3px #4780fc3b);
-      background: linear-gradient(to bottom, #4B83FE, #003299);
+      background: linear-gradient(to bottom, #4b83fe, #003299);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -81,7 +81,7 @@
     text-align: center;
     font-size: 1.8rem;
     margin: 2rem 0;
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     max-width: 90%;
   }
 
