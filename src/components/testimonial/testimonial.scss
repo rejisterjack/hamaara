@@ -1,0 +1,115 @@
+@use "../../styles/variables.scss" as v;
+
+.testimonial {
+  width: 100%;
+  margin: 3rem 0;
+  
+  // Logos Section
+  &_logos_container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 3rem 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10rem;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      top: 0;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, white, transparent);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, white, transparent);
+    }
+  }
+
+  &_logos {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    animation: scrollRightToLeft 40s linear infinite;
+
+    .logo_box {
+      display: flex;
+      align-items: center;
+      margin: 0 6rem;
+      flex-shrink: 0; // Prevent logo boxes from shrinking
+
+      // Remove hover transformation
+      &:hover {
+        transform: none;
+      }
+
+      .logo_square {
+        width: 3.8rem;
+        height: 3.8rem;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.5rem;
+
+        // Different gradient backgrounds for each logo
+        &.gradient-1 {
+          background: linear-gradient(to bottom, #000000, #1a1a1a);
+        }
+
+        &.gradient-2 {
+          background: linear-gradient(to bottom, #0d0d0d, #262626);
+        }
+
+        &.gradient-3 {
+          background: linear-gradient(to bottom, #1a1a1a, #333333);
+        }
+
+        &.gradient-4 {
+          background: linear-gradient(to bottom, #262626, #404040);
+        }
+
+        &.gradient-5 {
+          background: linear-gradient(to bottom right, #000000, #333333);
+        }
+
+        &.gradient-6 {
+          background: linear-gradient(to right, #111111, #292929);
+        }
+
+        &.gradient-7 {
+          background: linear-gradient(to top right, #0a0a0a, #2e2e2e);
+        }
+
+        &.gradient-8 {
+          background: linear-gradient(to left, #1e1e1e, #383838);
+        }
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #333;
+        font-family: v.$font-inter;
+      }
+    }
+  }
+}
+
+@keyframes scrollRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

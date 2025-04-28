@@ -10,6 +10,7 @@ import Explore from "./components/explore/Explore"
 import Contact from "./components/contact/Contact"
 import Social from "./components/social/Social"
 import Footer from "./components/footer/Footer"
+import Testimonial from "./components/testimonial/Testimonial"
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <NoticeBar />
       <HeroSection />
       <Showcase />
+      <Testimonial />
       <Planet />
       <Overview />
       <Investment />
@@ -24,6 +26,7 @@ const App = () => {
       <Explore />
       <Contact />
       <Social />
+      <Testimonial />
       <Footer />
     </div>
   )

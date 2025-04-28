@@ -4,12 +4,13 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: 5rem 0;
 }
 
 .social-section {
   position: relative;
   border-radius: 4.5rem;
-  background-image: url('../../assets/social.png');
+  background-image: url("../../assets/social.png");
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -17,9 +18,9 @@
   width: 100%;
   max-width: v.$max-width; // Use variable instead of hardcoded value
   margin: 0 auto;
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -28,7 +29,7 @@
     background: linear-gradient(to bottom, #00000000, #000000);
     z-index: 1;
   }
-  
+
   .social-content {
     position: relative;
     z-index: 2;
@@ -37,7 +38,7 @@
     align-items: center;
     text-align: center;
   }
-  
+
   .user-images-container {
     position: relative;
     margin-bottom: 3rem;
@@ -45,7 +46,7 @@
     height: 8rem;
     display: flex;
     justify-content: center;
-    
+
     .user-image {
       width: 6.9rem;
       height: 6.9rem;
@@ -57,20 +58,43 @@
       transition: transform 0.3s ease;
       z-index: 1;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); // Add shadow for better visual separation
-      
+
       // Repositioned for 6 users with better spacing and visibility
-      &.user-0 { left: calc(50% - 18rem); transform: rotate(-5deg); }
-      &.user-1 { left: calc(50% - 12rem); transform: rotate(3deg); z-index: 2; }
-      &.user-2 { left: calc(50% - 6rem); transform: rotate(-4deg); z-index: 1; }
-      &.user-3 { left: calc(50%); transform: rotate(2deg); z-index: 3; }
-      &.user-4 { left: calc(50% + 6rem); transform: rotate(-3deg); z-index: 2; }
-      &.user-5 { left: calc(50% + 12rem); transform: rotate(4deg); z-index: 4; }
-      
+      &.user-0 {
+        left: calc(50% - 18rem);
+        transform: rotate(-5deg);
+      }
+      &.user-1 {
+        left: calc(50% - 12rem);
+        transform: rotate(3deg);
+        z-index: 2;
+      }
+      &.user-2 {
+        left: calc(50% - 6rem);
+        transform: rotate(-4deg);
+        z-index: 1;
+      }
+      &.user-3 {
+        left: calc(50%);
+        transform: rotate(2deg);
+        z-index: 3;
+      }
+      &.user-4 {
+        left: calc(50% + 6rem);
+        transform: rotate(-3deg);
+        z-index: 2;
+      }
+      &.user-5 {
+        left: calc(50% + 12rem);
+        transform: rotate(4deg);
+        z-index: 4;
+      }
+
       &:hover {
         transform: translateY(-5px) scale(1.1);
         z-index: 10;
       }
-      
+
       img {
         width: 100%;
         height: 100%;
@@ -78,24 +102,24 @@
       }
     }
   }
-  
+
   .trusted-text {
     font-size: 1.6rem;
     color: white;
     margin-bottom: 1.5rem;
   }
-  
+
   .social-heading {
-    font-family: 'Manrope', sans-serif;
+    font-family: "Manrope", sans-serif;
     font-weight: 500;
     font-size: 6.8rem;
     letter-spacing: -2.4px;
     color: white;
     margin-bottom: 2rem;
   }
-  
+
   .social-description {
-    font-family: 'Manrope', sans-serif;
+    font-family: "Manrope", sans-serif;
     font-weight: 500;
     font-size: 2.3rem;
     color: white;
@@ -103,26 +127,26 @@
     margin: 0 auto 3rem;
     line-height: 1.4;
   }
-  
+
   .social-icons {
     display: flex;
     gap: 2rem;
-    
+
     .icon-box {
       width: 6.5rem;
       height: 6.5rem;
       border-radius: 1rem;
-      background: linear-gradient(to bottom, #797979, #3F3F3F);
+      background: linear-gradient(to bottom, #797979, #3f3f3f);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: transform 0.3s ease;
-      
+
       &:hover {
         transform: translateY(-5px);
       }
-      
+
       .social-icon {
         width: 3.2rem;
         height: 3.2rem;
