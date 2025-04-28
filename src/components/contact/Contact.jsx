@@ -8,9 +8,9 @@ const Contact = () => {
       <div className="contact-left">
         <div className="contact-info-box">
           <div className="email-icon">
-            {/* Envelope icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-              <path d="M0 4a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm22 4.5l-9 5.5-9-5.5V4h18v4.5zm0 2L22 18H2V10.5l9 5.5 9-5.5z"/>
+            {/* Envelope icon - updated with more reliable SVG */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
           </div>
           <h1 className="contact-title">Contact us</h1>
@@ -41,22 +41,22 @@ const Contact = () => {
         <div className="contact-form">
           <div className="form-group">
             <label htmlFor="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" />
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" />
           </div>
           
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" name="email" />
+            <input type="email" id="email" name="email" placeholder="Enter your email address" />
           </div>
           
           <div className="form-group">
             <label htmlFor="company">Company</label>
-            <input type="text" id="company" name="company" />
+            <input type="text" id="company" name="company" placeholder="Enter your company name" />
           </div>
           
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows="4"></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
           </div>
           
           <button type="submit" className="submit-btn">Submit</button>

@@ -28,18 +28,25 @@
       .email-icon {
         width: 50px;
         height: 50px;
-        background: linear-gradient(
-          to bottom,
-          #f8f9fa,
-          #cfcfcf
-        ); // Gradient background
+        background: linear-gradient(to bottom, #f8f9fa, #cfcfcf);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #4c87f4; // Color for the icon
+        color: #4c87f4;
         font-size: 24px;
         margin-bottom: 1rem;
         border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Add subtle shadow
+
+        svg {
+          width: 26px;
+          height: 26px;
+          transition: transform 0.3s ease; // Add animation
+        }
+
+        &:hover svg {
+          transform: scale(1.1); // Slight grow effect on hover
+        }
       }
 
       .contact-title {
@@ -149,27 +156,43 @@
       height: 100%; // Make form fill the container
       display: flex;
       flex-direction: column;
+      justify-content: space-between; // Better distribute vertical space
 
       .form-group {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem; // Increased gap between form elements
 
         label {
           display: block;
           margin-bottom: 0.5rem;
+          font-family: "Inter", sans-serif;
           font-weight: 500;
+          font-size: 1.7rem;
+          color: #525252;
         }
 
         input,
         textarea {
           width: 100%;
-          padding: 1rem;
-          border: 1px solid #ccc;
+          padding: 1.2rem;
+          border-width: 2px;
+          border-style: solid;
+          border-color: #e4e4e7;
           border-radius: 6px;
           font-family: "Inter", sans-serif;
+          font-weight: 500;
+          font-size: 1.7rem;
+
+          &::placeholder {
+            color: #737373;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 1.7rem;
+          }
         }
 
         textarea {
           resize: vertical;
+          min-height: 120px; // Increase height of message textarea
         }
       }
 
@@ -184,7 +207,7 @@
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.2s;
-        margin-top: auto; // Push button to bottom if needed
+        align-self: flex-start; // Left-align the button
 
         &:hover {
           background-color: #383838;
