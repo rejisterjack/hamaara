@@ -1,10 +1,12 @@
 import React from "react"
 import "./investment.scss"
-import fifteen from "../../assets/fifteen.jpg"
-import icon1 from "../../assets/icon1.png"
-import icon2 from "../../assets/icon2.png"
-import icon3 from "../../assets/icon3.png"
-import icon4 from "../../assets/icon4.png"
+// Import existing images from the project instead of missing icons
+import fifteen from "../../assets/eleven.png" // Replace with an existing image
+// Use other existing images for the step icons
+import image1 from "../../assets/twelve.png"
+import image2 from "../../assets/six.png"
+import image3 from "../../assets/eight.png"
+import image4 from "../../assets/five.png"
 
 const Investment = () => {
   return (
@@ -20,7 +22,7 @@ const Investment = () => {
         <div className="investment-steps">
           <div className="investment-step">
             <div className="step-icon">
-              <img src={icon1} alt="Step 1 Icon" />
+              <img src={image1} alt="Step 1 Icon" />
             </div>
             <h3 className="step-title">Step 1</h3>
             <p className="step-desc">
@@ -31,7 +33,7 @@ const Investment = () => {
 
           <div className="investment-step">
             <div className="step-icon">
-              <img src={icon2} alt="Step 2 Icon" />
+              <img src={image2} alt="Step 2 Icon" />
             </div>
             <h3 className="step-title">Step 2</h3>
             <p className="step-desc">
@@ -42,7 +44,7 @@ const Investment = () => {
 
           <div className="investment-step">
             <div className="step-icon">
-              <img src={icon3} alt="Step 3 Icon" />
+              <img src={image3} alt="Step 3 Icon" />
             </div>
             <h3 className="step-title">Step 3</h3>
             <p className="step-desc">
@@ -53,7 +55,7 @@ const Investment = () => {
 
           <div className="investment-step">
             <div className="step-icon">
-              <img src={icon4} alt="Step 4 Icon" />
+              <img src={image4} alt="Step 4 Icon" />
             </div>
             <h3 className="step-title">Step 4</h3>
             <p className="step-desc">
