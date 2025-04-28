@@ -94,6 +94,7 @@
 
     @include v.mobile {
       grid-template-columns: 1fr;
+      gap: 2.5rem 1rem;
     }
   }
 
@@ -107,6 +108,12 @@
     align-items: center;
     justify-content: center;
     max-width: 24.7rem;
+
+    @include v.mobile {
+      max-width: 100%;
+      width: 100%;
+      padding: 2.5rem 2rem;
+    }
 
     &:hover {
       transform: translateY(-5px);
@@ -138,6 +145,11 @@
       font-weight: 700;
       font-size: 3.4rem;
       margin-bottom: 1.5rem;
+
+      @include v.mobile {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+      }
     }
 
     p {
@@ -147,6 +159,10 @@
       opacity: 0.8;
       text-align: center;
       line-height: 1.5;
+
+      @include v.mobile {
+        font-size: 1.4rem;
+      }
     }
   }
 }
@@ -201,12 +217,21 @@
     &_header {
       h2 {
         font-size: 3.6rem;
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 1.6rem;
+        padding: 0 1rem;
       }
     }
 
     &_images {
+      margin-bottom: 5rem;
+      
       &_row {
         flex-direction: column;
+        gap: 1.5rem;
 
         &:first-child img,
         &:last-child img {
@@ -220,6 +245,31 @@
     &_features {
       h2 {
         font-size: 3rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+// Add support for very small screens
+@media (max-width: 350px) {
+  .planet {
+    padding: 3rem 1rem;
+    
+    &_header h2 {
+      font-size: 3rem;
+    }
+    
+    &_card {
+      padding: 2rem 1.5rem;
+      
+      .card_image {
+        width: 7rem;
+        height: 7rem;
+      }
+      
+      h3 {
+        font-size: 2.4rem;
       }
     }
   }

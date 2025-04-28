@@ -1,10 +1,20 @@
 @use "../../styles/variables.scss" as v;
 
 .explore-container {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   width: 100%;
-  max-width: v.$max-width; // Changed from hardcoded 1300px to variable
+  max-width: v.$max-width;
   margin: 3rem auto;
+
+  @include v.tablet {
+    padding: 3rem 1.5rem;
+    margin: 2rem auto;
+  }
+
+  @include v.mobile {
+    padding: 2rem 1rem;
+    margin: 1.5rem auto;
+  }
 }
 
 .explore-header {
@@ -12,6 +22,13 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+
+  @include v.tablet {
+    margin-bottom: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
 }
 
 .explore-title {
@@ -21,6 +38,25 @@
   line-height: 1.2;
   letter-spacing: -2.4px;
   color: #000000;
+
+  @include v.desktop-sm {
+    font-size: 4rem;
+  }
+
+  @include v.tablet {
+    font-size: 3.5rem;
+    letter-spacing: -1.8px;
+  }
+
+  @include v.mobile {
+    font-size: 2.8rem;
+    letter-spacing: -1.4px;
+  }
+
+  @include v.mobile-sm {
+    font-size: 2.4rem;
+    letter-spacing: -1px;
+  }
 }
 
 .view-all-btn {
@@ -40,6 +76,24 @@
   cursor: pointer;
   transition: all 0.3s ease;
 
+  @include v.tablet {
+    font-size: 1.5rem;
+    padding: 0.2rem 0.2rem 0.2rem 1.8rem;
+    align-self: flex-start;
+  }
+
+  @include v.mobile {
+    font-size: 1.4rem;
+    padding: 0.2rem 0.2rem 0.2rem 1.5rem;
+    gap: 1.2rem;
+  }
+
+  @include v.mobile-sm {
+    font-size: 1.3rem;
+    padding: 0.2rem 0.2rem 0.2rem 1.2rem;
+    gap: 1rem;
+  }
+
   .arrow-circle {
     display: flex;
     align-items: center;
@@ -49,6 +103,18 @@
     width: 30px;
     height: 30px;
     padding: 10px;
+
+    @include v.mobile {
+      width: 28px;
+      height: 28px;
+      padding: 8px;
+    }
+
+    @include v.mobile-sm {
+      width: 25px;
+      height: 25px;
+      padding: 7px;
+    }
   }
 
   &:hover {
@@ -60,6 +126,20 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+
+  @include v.desktop-sm {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+
+  @include v.tablet {
+    gap: 1.5rem;
+  }
+
+  @include v.mobile {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .article-card {
@@ -68,10 +148,20 @@
 
   .article-img {
     width: 100%;
-    height: 240px; // Fixed height for consistency
+    height: 240px;
     margin-bottom: 1.5rem;
     border-radius: 8px;
     overflow: hidden;
+
+    @include v.tablet {
+      height: 200px;
+      margin-bottom: 1.2rem;
+    }
+
+    @include v.mobile-sm {
+      height: 180px;
+      margin-bottom: 1rem;
+    }
 
     img {
       width: 100%;
@@ -91,27 +181,13 @@
     font-size: 1.8rem;
     color: #000000;
     line-height: 1.4;
-  }
-}
 
-@media (max-width: 992px) {
-  .articles-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    @include v.tablet {
+      font-size: 1.6rem;
+    }
 
-@media (max-width: 768px) {
-  .explore-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-
-  .articles-container {
-    grid-template-columns: 1fr;
-  }
-
-  .explore-title {
-    font-size: 3.5rem;
+    @include v.mobile {
+      font-size: 1.5rem;
+    }
   }
 }

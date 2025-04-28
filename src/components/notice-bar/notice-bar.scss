@@ -13,4 +13,22 @@
     font-size: 1.8rem;
     text-align: center;
   }
+  
+  // Media query for tablet screens
+  @media screen and (max-width: 768px) {
+    padding: 8px 12px;
+    
+    &_text {
+      font-size: 1.4rem;
+    }
+  }
+  
+  // Media query for mobile screens
+  @media screen and (max-width: 576px) {
+    padding: 6px 10px;
+    
+    &_text {
+      font-size: 1.2rem;
+    }
+  }
 }

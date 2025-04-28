@@ -3,6 +3,16 @@
 .showcase {
   max-width: v.$max-width;
   margin: 6rem auto;
+  padding: 0 2rem;
+  
+  @include v.tablet {
+    margin: 4rem auto;
+  }
+  
+  @include v.mobile {
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
 
   // Cards Section
   &_cards {
@@ -70,6 +80,16 @@
           font-weight: 700;
           margin-bottom: 2rem;
           color: #333;
+          
+          @include v.tablet {
+            font-size: 2.6rem;
+            margin-bottom: 1.5rem;
+          }
+          
+          @include v.mobile {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+          }
         }
 
         p {
@@ -78,6 +98,16 @@
           margin-bottom: 3rem;
           color: #666;
           font-family: v.$font-dm-sans;
+          
+          @include v.tablet {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+          }
+          
+          @include v.mobile {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+          }
         }
 
         .learn-more {
@@ -90,6 +120,11 @@
           color: white;
           background: linear-gradient(to bottom, #787878, #2c2c2d);
           transition: opacity 0.3s ease;
+
+          @include v.mobile {
+            font-size: 1.4rem;
+            padding: 1rem 2rem;
+          }
 
           &:hover {
             opacity: 0.9;
@@ -105,17 +140,38 @@
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     height: 100%;
+    
+    @include v.mobile {
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(10rem, auto);
+      gap: 1.5rem;
+    }
 
     .showcase_card.small {
       padding: 2rem;
       display: flex;
       flex-direction: column;
+      
+      @include v.mobile {
+        padding: 1.5rem;
+        min-height: 8rem;
+        justify-content: center;
+      }
 
       h2 {
         font-size: 5rem;
         font-weight: 700;
         margin-bottom: .5rem;
         color: #333;
+        
+        @include v.tablet {
+          font-size: 4rem;
+        }
+        
+        @include v.mobile {
+          font-size: 3.2rem;
+          margin-bottom: 0.3rem;
+        }
       }
 
       p {
@@ -123,6 +179,14 @@
         font-weight: 400;
         color: #666;
         font-family: v.$font-dm-sans;
+        
+        @include v.tablet {
+          font-size: 1.8rem;
+        }
+        
+        @include v.mobile {
+          font-size: 1.6rem;
+        }
       }
     }
   }
@@ -279,20 +343,74 @@
   .showcase {
     padding: 3rem 1rem;
 
+    &_cards {
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
     &_grid {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, auto);
     }
 
-    &_card.large .card_content {
-      padding: 2rem;
-
-      h3 {
-        font-size: 2.4rem;
+    &_card.large {
+      padding: 1.5rem;
+      
+      .card_image {
+        img {
+          max-height: 20rem;
+        }
       }
+      
+      .card_content {
+        padding: 1.5rem 1rem;
 
+        h3 {
+          font-size: 2.2rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    
+    &_logos_container {
+      margin-top: 4rem;
+      padding: 2rem 0;
+    }
+  }
+}
+
+// Add small phone breakpoint for extreme small screens
+@media (max-width: 375px) {
+  .showcase {
+    &_card.large .card_content {
+      padding: 1rem 0.5rem;
+      
+      h3 {
+        font-size: 1.8rem;
+      }
+      
       p {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+      }
+      
+      .learn-more {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.3rem;
+      }
+    }
+    
+    &_grid .showcase_card.small {
+      padding: 1.2rem;
+      
+      h2 {
+        font-size: 2.8rem;
+      }
+      
+      p {
+        font-size: 1.4rem;
       }
     }
   }

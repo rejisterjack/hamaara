@@ -63,6 +63,7 @@
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
     max-width: 96rem;
+    width: auto; // Allow natural width on desktop
 
     &:hover {
       opacity: 0.9;
@@ -186,6 +187,12 @@
     &_description p {
       font-size: 1.8rem;
     }
+    
+    &_button {
+      font-size: 1.6rem;
+      padding: 1.2rem 3rem;
+      width: 80%; // Wider on tablets
+    }
 
     &_fullwidth {
       height: 40rem;
@@ -210,22 +217,44 @@
       padding: 3rem 1.5rem;
     }
 
-    &_header h2 {
-      font-size: 3.2rem;
+    &_header {
+      margin-bottom: 2.5rem;
+      
+      h2 {
+        font-size: 3.2rem;
+      }
     }
 
-    &_description p {
-      font-size: 1.6rem;
+    &_description {
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      
+      p {
+        font-size: 1.6rem;
+      }
     }
 
     &_button {
       padding: 1.2rem 2.5rem;
       font-size: 1.6rem;
+      width: 100%; // Full width on mobile
+      max-width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    &_image {
+      margin-bottom: 4rem;
+      
+      img {
+        border-radius: 1.5rem;
+      }
     }
 
     &_fullwidth {
       height: 30rem;
       border-radius: 2.5rem;
+      margin: 0 1rem;
+      width: calc(100% - 2rem);
 
       .overlay_content {
         h2 {
@@ -235,6 +264,38 @@
 
         p {
           font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+// Extra small mobile screens
+@media (max-width: 380px) {
+  .overview {
+    &_header h2 {
+      font-size: 2.8rem;
+    }
+    
+    &_description p {
+      font-size: 1.5rem;
+    }
+    
+    &_button {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+    }
+    
+    &_fullwidth {
+      height: 25rem;
+      
+      .overlay_content {
+        h2 {
+          font-size: 2.8rem;
+        }
+        
+        p {
+          font-size: 1.6rem;
         }
       }
     }
