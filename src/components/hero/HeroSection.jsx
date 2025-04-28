@@ -27,7 +27,7 @@ const HeroSection = () => {
           modern design meets community spirit.
         </p>
         <div className="hero_section_buttons">
-          <button className="get-in-touch" onClick={() => scrollToSection('about')}>Get in Touch</button>
+          <button className="get-in-touch" onClick={() => scrollToSection('contact-form')}>Get in Touch</button>
           <button className="invest" onClick={() => scrollToSection('invest-now')}>Invest</button>
         </div>
       </div>

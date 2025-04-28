@@ -4,6 +4,7 @@ import "./navbar.scss"
 
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState("Home")
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Nav items with corresponding section IDs
   const navItems = [
@@ -15,12 +16,24 @@ const Navbar = () => {
 
   // Function to handle manual scrolling to section (for buttons)
   const scrollToSection = (id) => {
+    setMobileMenuOpen(false) // Close mobile menu when navigating
     scroller.scrollTo(id, {
       duration: 800,
       delay: 0,
       smooth: "easeInOutQuart",
       offset: 0,
     })
+  }
+
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
+  }
+
+  // Handle navigation item click
+  const handleNavItemClick = (name) => {
+    setActiveTab(name)
+    setMobileMenuOpen(false)
   }
 
   useEffect(() => {
@@ -93,7 +106,7 @@ const Navbar = () => {
       <div className="right">
         <button
           className="get-in-touch"
-          onClick={() => scrollToSection("invest-now")}
+          onClick={() => scrollToSection("contact-form")}
         >
           Get in Touch
         </button>
@@ -103,6 +116,53 @@ const Navbar = () => {
         >
           Invest
         </button>
+      </div>
+
+      {/* Mobile menu button (hamburger) */}
+      <div 
+        className={`mobile-menu-button ${mobileMenuOpen ? 'open' : ''}`}
+        onClick={toggleMobileMenu}
+      >
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+
+      {/* Mobile menu overlay */}
+      <div className={`mobile-overlay ${mobileMenuOpen ? 'open' : ''}`}>
+        <ul>
+          {navItems.map((item) => (
+            <li
+              key={item.name}
+              className={activeTab === item.name ? "active" : ""}
+            >
+              <Link
+                to={item.id}
+                spy={true}
+                smooth={true}
+                duration={800}
+                offset={0}
+                onClick={() => handleNavItemClick(item.name)}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className="mobile-buttons">
+          <button
+            className="get-in-touch"
+            onClick={() => scrollToSection("contact-form")}
+          >
+            Get in Touch
+          </button>
+          <button
+            className="invest"
+            onClick={() => scrollToSection("invest-now")}
+          >
+            Invest
+          </button>
+        </div>
       </div>
     </div>
   )

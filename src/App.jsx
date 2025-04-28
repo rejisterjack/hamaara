@@ -33,7 +33,9 @@ const App = () => {
       </section>
       <section id="invest-now">
         <Explore />
-        <Contact />
+        <div id="contact-form">
+          <Contact />
+        </div>
       </section>
       <Social />
       <Testimonial />

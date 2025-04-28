@@ -98,4 +98,169 @@
       }
     }
   }
+
+  // Mobile menu hamburger icon
+  .mobile-menu-button {
+    display: none;
+    cursor: pointer;
+    z-index: 1100;
+
+    .bar {
+      width: 2.5rem;
+      height: 0.3rem;
+      background-color: white;
+      margin: 0.6rem 0;
+      transition: all 0.3s ease;
+      border-radius: 3px;
+    }
+
+    &.open {
+      .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-0.6rem, 0.6rem);
+      }
+      .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-0.6rem, -0.6rem);
+      }
+    }
+  }
+
+  // Mobile menu dropdown (replacing the overlay)
+  .mobile-overlay {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+    padding: 2rem 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    &.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 0;
+      margin: 0 0 2.5rem 0;
+      width: 100%;
+
+      li {
+        font-family: "Inter", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        width: 100%;
+        padding: 0.8rem 0;
+
+        &.active {
+          color: #2e74ff;
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+      }
+    }
+
+    .mobile-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1.5rem;
+      width: 90%;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+      }
+
+      button {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: white;
+        border: none;
+        padding: 1rem 1.4rem;
+        border-radius: 0.8rem;
+        cursor: pointer;
+
+        &.get-in-touch {
+          background: linear-gradient(to bottom, #787878, #2c2c2d);
+        }
+
+        &.invest {
+          background: linear-gradient(to bottom, #4b83fe, #2256c6);
+        }
+      }
+    }
+  }
+
+  // Media queries for responsiveness
+  @media (max-width: 1024px) {
+    max-width: 90%;
+    padding: 0 1.5rem;
+
+    .middle ul {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    position: relative; // Ensure proper dropdown positioning
+
+    .middle {
+      display: none;
+    }
+
+    .right {
+      display: none;
+    }
+
+    .mobile-menu-button {
+      display: block;
+    }
+
+    .mobile-overlay {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: 5.5rem;
+    margin: 1.5rem auto;
+    top: 1.5rem;
+    padding: 0 1.2rem;
+
+    .left {
+      gap: 0.7rem;
+
+      img {
+        height: 2.2rem;
+        width: 2.2rem;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+    }
+  }
 }
