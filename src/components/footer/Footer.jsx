@@ -1,23 +1,20 @@
 import React from 'react';
 import './footer.scss';
 import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-// Using a direct import path for troubleshooting
 import footerImg from '../../assets/footer.png';
 
 const Footer = () => {
-  // Add console log to verify the image path
-  console.log("Footer image path:", footerImg);
-  
   return (
     <footer className="footer">
       <div className="footer-gradient-bg"></div>
       
-      {/* Added inline style for troubleshooting */}
       <img 
         src={footerImg} 
         alt="Footer background" 
-        className="footer-image" 
+        className="footer-image"
       />
+      
+      <div className="footer-overlay"></div>
       
       <div className="footer-content">
         <div className="footer-container">
@@ -32,7 +29,7 @@ const Footer = () => {
               </div>
               <div className="footer-contact-item">
                 <FaMapMarkerAlt className="footer-icon" />
-                <span>13s Sd, Rd RET #%) SF, QA 22182</span>
+                <span>13s Sd, Rd RET 350 SF, QA 22182</span>
               </div>
             </div>
           </div>
