@@ -1,0 +1,88 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.3rem;
+  border-radius: 1.8rem;
+  background-color: black;
+  padding: 0 2rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+  // Left side
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      height: 2.7rem;
+      width: 2.6rem;
+    }
+
+    h1 {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-size: 3.4rem;
+      color: white;
+      margin: 0;
+    }
+  }
+
+  // Middle
+  .middle {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-family: "Inter", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &.active {
+          color: #2e74ff;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  // Right side
+  .right {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &.get-in-touch {
+        background: linear-gradient(to bottom, #787878, #2c2c2d);
+      }
+
+      &.invest {
+        background: linear-gradient(to bottom, #4b83fe, #2256c6);
+      }
+    }
+  }
+}

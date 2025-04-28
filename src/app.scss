@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Primary Colors */
+$primary-blue: #0055ff;
+$primary-orange: #ff5a19;
+$primary-teal: #007c91;
+$primary-purple: #b854ff;
+$primary-light-blue: #38b8ff;
+
+/* White Theme Variants */
+$white: #ffffff;
+$off-white: #f8f8f8;
+$warm-white: #f5f5f0;
+$cool-white: #f0f5f5;
+
+/* Font Families */
+$font-dm-sans: "DM Sans", sans-serif;
+$font-geist: "Geist", sans-serif;
+$font-instrument: "Instrument Sans", sans-serif;
+$font-inter: "Inter", sans-serif;
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $font-inter;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-geist;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Screen Breakpoints */
+$mobile-sm: 320px;
+$mobile: 480px;
+$tablet-sm: 576px;
+$tablet: 768px;
+$desktop-sm: 992px;
+$desktop: 1200px;
+$desktop-lg: 1440px;
+$desktop-xl: 1920px;
+
+/* Media Query Mixins */
+@mixin mobile-sm {
+  @media (max-width: #{$mobile-sm}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  @media (max-width: #{$tablet-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media (max-width: #{$desktop-xl}) {
+    @content;
+  }
+}

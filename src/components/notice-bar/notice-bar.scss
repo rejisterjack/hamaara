@@ -1,0 +1,16 @@
+.notice_bar {
+  background: linear-gradient(90deg, #0055ff, #7099fe, #0055ff);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_text {
+    color: #e0d7fe;
+    margin: 0;
+    font-weight: 600;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
