@@ -9,6 +9,7 @@ import Distributions from "./components/distributions/Distributions"
 import Explore from "./components/explore/Explore"
 import Contact from "./components/contact/Contact"
 import Social from "./components/social/Social"
+import Footer from "./components/footer/Footer"
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Explore />
       <Contact />
       <Social />
+      <Footer />
     </div>
   )
 }
