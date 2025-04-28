@@ -1,0 +1,135 @@
+@use "../../styles/variables.scss" as v;
+
+.distributions {
+  position: relative;
+  width: 100%;
+  background: url("../../assets/twelve.png") no-repeat top center/cover;
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.7
+    ); // Increased opacity from 0.5 to 0.7 for darker overlay
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6rem 4rem;
+    max-width: v.$max-width; // Changed from 1400px to use the standard max-width variable
+    margin: 0 auto;
+    gap: 3rem;
+    z-index: 2;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      padding: 4rem 2rem;
+    }
+  }
+
+  &__left {
+    flex: 1;
+    color: #fff;
+  }
+
+  &__subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8.8rem;
+    letter-spacing: -0.5px;
+    background: linear-gradient(to bottom, #ffffff, #ffffff, #999999);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 6rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 4.5rem;
+    }
+  }
+
+  &__description {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  &__button {
+    font-family: v.$font-montserrat;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    color: black;
+    background: linear-gradient(to bottom, #ffffff, #e1e1e1);
+    box-shadow: 0 4px 15px #6d758f;
+    border: none;
+    margin-bottom: 6rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-width: 96rem;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 49rem; // Add minimum height to ensure container has dimensions
+
+    @media (max-width: 768px) {
+      min-height: 40rem;
+    }
+
+    @media (max-width: 576px) {
+      min-height: 30rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 55rem;
+    height: 49rem;
+    background: url("../../assets/twelve.png") no-repeat bottom center/cover;
+    background-position: center calc(100% - 10px); // Cut 10px from top by shifting image up
+    border-radius: 3rem;
+    border: 1rem solid rgba(255, 255, 255, 0.2);
+
+    @media (max-width: 768px) {
+      height: 40rem;
+    }
+
+    @media (max-width: 576px) {
+      height: 30rem;
+    }
+  }
+}
