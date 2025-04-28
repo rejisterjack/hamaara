@@ -26,7 +26,7 @@ const Overview = () => {
 
         <div className="overview_fullwidth" style={{ backgroundImage: `url(${fourteen})` }}>
           <div className="overlay_content">
-            <h2>We will Help You Every Steps Of The Way</h2>
+            <h2>We will Help You Every <br /> Steps Of The Way</h2>
             <p>We will Help You Every Steps Of The Way</p>
           </div>
         </div>
