@@ -3,7 +3,6 @@ import "./showcase.scss"
 import placeholderImage from "../../assets/eleven.png"
 
 const Showcase = () => {
-  // Placeholder image URL - replace with your actual image
 
   return (
     <div className="showcase">
