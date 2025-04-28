@@ -3,10 +3,10 @@ import "./investment.scss"
 // Import existing images from the project instead of missing icons
 import fifteen from "../../assets/eleven.png" // Replace with an existing image
 // Use other existing images for the step icons
-import icon1 from "../../assets/icon1.png"
-import icon2 from "../../assets/icon2.png"
-import icon3 from "../../assets/icon3.png"
-import icon4 from "../../assets/icon4.png"
+import icon1 from "../../assets/iconone.png"
+import icon2 from "../../assets/icontwo.png"
+import icon3 from "../../assets/iconthree.png"
+import icon4 from "../../assets/iconfour.png"
 
 const Investment = () => {
   return (
