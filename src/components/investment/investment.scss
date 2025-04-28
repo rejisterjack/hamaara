@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 .investment-container {
-  padding: 4rem 2rem;
+  padding: 8rem 0;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -10,16 +10,16 @@
 .investment-header {
   text-align: center;
   margin-bottom: 5rem;
-  
+
   .investment-title {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 4rem;
     margin-bottom: 1rem;
   }
-  
+
   .investment-desc {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1.7rem;
     color: #666;
@@ -27,10 +27,12 @@
 }
 
 .investment-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   gap: 10rem;
-  
+
   @media (max-width: 992px) {
     flex-direction: column-reverse;
   }
@@ -47,26 +49,27 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+  max-width: 46rem;
+
   .step-icon {
     margin-bottom: 1rem;
-    
+
     img {
       width: 3.5rem;
       height: 3.5rem;
       display: block;
     }
   }
-  
+
   .step-title {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 2.1rem;
     margin-bottom: 0.8rem;
   }
-  
+
   .step-desc {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
     color: #666;
@@ -80,7 +83,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   img {
     max-width: 100%;
     height: auto;
