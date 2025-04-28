@@ -7,6 +7,11 @@
   background-color: black;
   padding: 0 2rem;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  max-width: 1035px;
+  margin: 2rem auto;
+  position: sticky;
+  top: 2rem;
+  z-index: 1000;
 
   // Left side
   .left {
@@ -44,6 +49,14 @@
         color: white;
         cursor: pointer;
         transition: color 0.3s ease;
+
+        a {
+          cursor: pointer;
+          color: inherit;
+          text-decoration: none;
+          display: block;
+          padding: 0.5rem 0;
+        }
 
         &.active {
           color: #2e74ff;

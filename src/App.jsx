@@ -11,20 +11,30 @@ import Contact from "./components/contact/Contact"
 import Social from "./components/social/Social"
 import Footer from "./components/footer/Footer"
 import Testimonial from "./components/testimonial/Testimonial"
+import Navbar from "./components/navbar/Navbar"
 
 const App = () => {
   return (
     <div>
       <NoticeBar />
-      <HeroSection />
-      <Showcase />
-      <Testimonial />
-      <Planet />
-      <Overview />
-      <Investment />
-      <Distributions />
-      <Explore />
-      <Contact />
+      <Navbar />
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="about">
+        <Showcase />
+        <Testimonial />
+      </section>
+      <section id="our-project">
+        <Planet />
+        <Overview />
+        <Investment />
+        <Distributions />
+      </section>
+      <section id="invest-now">
+        <Explore />
+        <Contact />
+      </section>
       <Social />
       <Testimonial />
       <Footer />

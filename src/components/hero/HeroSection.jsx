@@ -1,11 +1,19 @@
 import React from "react"
-import Navbar from "../navbar/Navbar"
+import { scroller } from "react-scroll"
 import "./hero-section.scss"
 
 const HeroSection = () => {
+  const scrollToSection = (id) => {
+    scroller.scrollTo(id, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: 0
+    });
+  };
+
   return (
     <div className="hero_section">
-      <Navbar />
       <div className="hero_section_content">
         <h1 className="hero_section_heading">
           <span className="invest">Invest in a </span>
@@ -19,8 +27,8 @@ const HeroSection = () => {
           modern design meets community spirit.
         </p>
         <div className="hero_section_buttons">
-          <button className="get-in-touch">Get in Touch</button>
-          <button className="invest">Invest</button>
+          <button className="get-in-touch" onClick={() => scrollToSection('about')}>Get in Touch</button>
+          <button className="invest" onClick={() => scrollToSection('invest-now')}>Invest</button>
         </div>
       </div>
     </div>
