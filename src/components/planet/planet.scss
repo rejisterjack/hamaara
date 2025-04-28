@@ -1,0 +1,226 @@
+@use "../../styles/variables.scss" as v;
+
+.planet {
+  background: linear-gradient(to bottom, #000000, #212121, #000000);
+  width: 100%;
+  color: white;
+  padding: 8rem 0;
+
+  &_container {
+    max-width: v.$max-width;
+    margin: 0 auto;
+  }
+
+  &_header {
+    margin-bottom: 6rem;
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto 5rem;
+
+    h2 {
+      font-family: v.$font-geist;
+      font-weight: 600;
+      font-size: 5rem;
+      line-height: 1.2;
+      max-width: 80%;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      letter-spacing: -2px;
+    }
+
+    p {
+      font-family: v.$font-dm-sans;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+  }
+
+  &_images {
+    margin-bottom: 8rem;
+
+    &_row {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+
+      &:first-child {
+        justify-content: space-between;
+
+        img {
+          width: 48%;
+          height: 38rem;
+        }
+      }
+
+      &:last-child {
+        justify-content: space-between;
+
+        img {
+          width: 31%;
+          height: 28rem;
+        }
+      }
+
+      img {
+        border-radius: 2.2rem;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &_features {
+    h2 {
+      font-family: v.$font-geist;
+      font-weight: 600;
+      font-size: 4rem;
+      letter-spacing: -2px;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+  }
+
+  &_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 2rem;
+    align-items: center;
+    justify-items: center;
+
+    @include v.tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include v.mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &_card {
+    background: transparent;
+    border-radius: 2rem;
+    padding: 3rem 2.5rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 24.7rem;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .card_image {
+      width: 8.5rem;
+      height: 8.5rem;
+      border-radius: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #ffffff, #999999);
+      overflow: hidden; // This ensures the image stays within the rounded border
+      padding: 0.5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block; // Ensures proper rendering
+        border-radius: 1.1rem;
+      }
+    }
+
+    h3 {
+      font-family: v.$font-inter;
+      font-weight: 700;
+      font-size: 3.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-family: v.$font-inter;
+      font-weight: 400;
+      font-size: 1.6rem;
+      opacity: 0.8;
+      text-align: center;
+      line-height: 1.5;
+    }
+  }
+}
+
+// Responsive adjustments
+@include v.desktop-sm {
+  .planet {
+    &_header {
+      h2 {
+        font-size: 5.5rem;
+      }
+    }
+
+    &_card h3 {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+@include v.tablet {
+  .planet {
+    padding: 6rem 2rem;
+
+    &_header {
+      h2 {
+        font-size: 4.5rem;
+      }
+
+      p {
+        max-width: 100%;
+      }
+    }
+
+    &_images {
+      &_row {
+        &:first-child img {
+          height: 30rem;
+        }
+
+        &:last-child img {
+          height: 22rem;
+        }
+      }
+    }
+  }
+}
+
+@include v.mobile {
+  .planet {
+    padding: 4rem 1.5rem;
+
+    &_header {
+      h2 {
+        font-size: 3.6rem;
+      }
+    }
+
+    &_images {
+      &_row {
+        flex-direction: column;
+
+        &:first-child img,
+        &:last-child img {
+          width: 100%;
+          height: auto;
+          max-height: 30rem;
+        }
+      }
+    }
+
+    &_features {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
