@@ -1,9 +1,9 @@
 import React from "react"
 import "./showcase.scss"
+import placeholderImage from "../../assets/eleven.png"
 
 const Showcase = () => {
   // Placeholder image URL - replace with your actual image
-  const placeholderImage = "src/assets/eleven.png"
 
   return (
     <div className="showcase">
