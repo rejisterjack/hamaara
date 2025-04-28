@@ -4,6 +4,7 @@ import HeroSection from "./components/hero/HeroSection"
 import Showcase from "./components/showcase/Showcase"
 import Planet from "./components/planet/Planet"
 import Overview from "./components/overview/Overview"
+import Investment from "./components/investment/Investment"
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Showcase />
       <Planet />
       <Overview />
+      <Investment />
     </div>
   )
 }
